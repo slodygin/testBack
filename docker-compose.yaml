@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    backend1:
+        build: .
+        restart: always
+        ports:
+            - 8080:80
+        environment:
+            - MESSAGE=I'm backend 1
+    backend2:
+        build: .
+        restart: always
+        ports:
+            - 8081:80
+        environment:
+            - MESSAGE=I'm backend 2
